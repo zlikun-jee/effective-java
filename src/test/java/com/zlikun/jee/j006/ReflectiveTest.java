@@ -46,7 +46,7 @@ public class ReflectiveTest {
     }
 
     @Test
-    public void test() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+    public void clazz() throws ClassNotFoundException, IllegalAccessException, InstantiationException {
 
         Class<MyType> clazz = MyType.class;
 
@@ -65,16 +65,6 @@ public class ReflectiveTest {
         // 构造实例时会执行非静态代码块和无参构造方法
         MyType mt = clazz.newInstance();
         assertNull(mt.name);
-
-
-//        // 返回类字段（属性）列表
-//        // Field [] fields = clazz.getFields();
-//        // 根据字段名返回字段对象
-//        // Field field = clazz.getField("name");
-//        // 返回类方法列表
-//        // Method [] methods = clazz.getDeclaredMethods();
-//        // 根据方法签名（方法名，参数类型列表）返回方法对象
-//        // Method method = clazz.getDeclaredMethod("sayHello", String.class);
 
     }
 
