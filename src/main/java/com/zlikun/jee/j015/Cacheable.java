@@ -16,21 +16,23 @@ public @interface Cacheable {
 
     /**
      * 缓存前缀
+     *
      * @return
      */
     String prefix() default "";
 
     /**
      * 缓存前缀，相当于prefix的别名，value表示是一个默认属性（当只有这一个属性时，可以省略属性名）
+     *
      * @return
      */
     String value() default "";
 
     /**
      * 缓存版本
+     *
      * @return
      */
     int version() default 0;
-
 
 }
